@@ -43,7 +43,7 @@ for (i in 1:nrow(result)) {
   half_life <- -log(2+exp(B), base = exp(A)) # time when proportion alive is half of starting value
   # p < 0.05 for model_sig means there is at least one significant predictor in the model
   model_sig <- pchisq(model$null.deviance - model$deviance, model$df.null - model$df.residual, lower.tail = FALSE)
-  goodness_of_fit <- 1 - model$deviance/model$null.deviance # goodness of fit is not (1 - badness of fit)
+  goodness_of_fit <- 1 - model$deviance/model$null.deviance
   
   result$fifty_percent_life[i] <- fifty_percent_life
   result$half_life[i] <- half_life
