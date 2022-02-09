@@ -48,7 +48,7 @@ for (i in 1:nrow(result)) {
   result$fifty_percent_life[i] <- fifty_percent_life
   result$half_life[i] <- half_life
   result$goodness_of_fit[i] <- goodness_of_fit
-  result$badness_of_fit[i] <- badness_of_fit
+  result$model_sig[i] <- model_sig
 }
 result
 
