@@ -68,7 +68,7 @@ t_test_stats <- data.frame(strain1 = NA,
 for (i in 1: dim(all_pairs)[1]) {
   tmp <- t.test(x = filter(stats, strain == all_pairs[i,1])$half_life,
                 y = filter(stats, strain == all_pairs[i,2])$half_life,
-                var.equal = TRUE) # set to FALSE is Bartlett's p < 0.05
+                var.equal = TRUE) # set to FALSE if Bartlett's p < 0.05
   t_test_stats[i,1] <- all_pairs[i,1]
   t_test_stats[i,2] <- all_pairs[i,2]
   t_test_stats[i,3] <- tmp$p.value
