@@ -33,7 +33,7 @@ result <- ss %>%
 for (i in 1:nrow(result)) {
   model <- glm(data = filter(ss, strain == result$strain[i] & rep == result$rep[i]),
                formula = proportion ~ days_after_bleach,
-               weights = total,
+               # weights = total,
                family = "quasibinomial")
   
   A = model$coefficients[2]
